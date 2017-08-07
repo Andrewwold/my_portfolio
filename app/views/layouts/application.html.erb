@@ -23,16 +23,29 @@
         <div class="cover-container">
 
           <%= video_tag(
-              'HardDrivePhotojpeg.mp4',
+              'My Movie.mp4',
               id: 'background',
               autoplay: true,
               loop: true,
               muted: true,
-              poster: 'home_bg.png'
             )
             %>
 
-          <%= render "shared/application_nav" %>
+            <audio id="getVolume" src="04 Beethoven's 5 Secrets.m4a" autoplay controls loop audio.volume hidden >
+              <p>Your browser does not support HTML5 audio playback</p>
+            </audio>
+
+            <script>
+              var audio = document.getElementById("getVolume");
+                audio.volume = 0.2;
+            </script> 
+
+
+            <% if content_for? :nav %>
+              <%= content_for :nav %>
+            <% else %>
+              <%= render "shared/application_nav" %>
+            <% end %>
 
           <%= yield %>
 

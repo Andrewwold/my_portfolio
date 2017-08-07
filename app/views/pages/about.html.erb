@@ -1,45 +1,42 @@
-<div class="app-card-container">
-  <div class="card">
-    <h1>About Me</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
 
-    <hr>
 
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag "profile.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
-        <div class="skills">
-          <% @skills.each do |skill| %>
-            <div class="skill">
-              <h4><%= skill.title %></h4>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-striped bg-warning"
-                  role="progressbar"
-                  aria-valuenow="<%= skill.percent_utilized %>"
-                  aria-valuemax="100"
-                  style="width: <%= skill.percent_utilized %>%"
-                ></div>
-              </div>
-            </div>
-          <% end %>
+      <div id="f1_container">
+        <div id="f1_card" class="shadow">
+          <div class="front face">
+            <%= image_tag "IMG_0048.JPG", width: 300, alt: "profile image", class: 'profile-img' %>
+          </div>
+          <div class="back face center">
+            <p>I have a B.S. degree in business management</p>
+            <p>I am an Instructor/TA working at Bottega.Tech, teaching students how to code Web apps with RUBY, HTML, CSS, TYPESCRIPT, ANGULAR 2, RAILS, and some other materials and topics as well..</p>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-8">
-        <p>
-          With over a decade of development experience in a number of industries I realized that the typical product creation process between clients and developers was flawed. All too often developers rarely communicate to clients throughout the development stage, resulting in a final product that fails to reach the goal sought by the customer and end user.
+
+     <%#= image_tag "IMG_0048.JPG", width: 300, alt: "profile image", class: 'profile-img' %>
+      
+    </div>
+    <div class="col-md-8">
+
+     <center><%= render 'about_buttons' %></center>
+    
+        <p class="frame_hide"><fade1>I love problem solving.</fade1><fade1 class="hidden">I have a B.S. degree in business management.</fade1>
         </p>
 
-        <p>
-          For this reason I decided to utilize a completely different development pattern that focuses on highly focused communication and transparent design patterns. When I take on a project not only do I work to craft the application according to the client's specifications, I give daily updates to ensure that the project is aligning properly with the client's goals. The end result is the right product, delivered on time, and on budget.
+        <p class="frame_hide"><fade1>I love problem solving, a lot of my background including my non coding experiences revolve around process improvements, and efficiencies. I have worked on many such projects including proposing and running projects that have saved companies hundreds of thousands of dollars yearly. I have taken that background and that drive and put it into my new love, coding and web development! I look forward to advancing in this field where skill, and the ability to do the work, is a main driver.</fade1><fade1 class="hidden">I have a B.S. degree in business management, and I am an Eagle Scout with over 2500 hours of volunteer hours served, (A personal goal I set as a teenager) I graduated from Bottega Tech coding bootcamp, and I am currently an instructor/TA working with students both full-time and part-time, and teaching them how to code Web apps with RUBY, HTML, CSS, TYPESCRIPT, ANGULAR 2, RAILS, and some other materials and topics as well.</fade1>
         </p>
-
-        <%= render 'about_buttons' %>
-        <%= render 'about_job_history' %>
-        <%= render 'about_education' %>
-        <%= render 'about_courses' %>
-        <%= render 'about_press' %>
-      </div>
+        
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+    <%= render 'about_job_history' %>
+    <%= render 'about_education' %>
     </div>
   </div>
 </div>
+
+

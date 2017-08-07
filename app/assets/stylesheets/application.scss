@@ -120,6 +120,9 @@ h6, .h6 {
  */
 
 .cover {
+  /*background: rgba(500, 600, 500, 0.1);*/
+  background-image: url("Shot.png");
+  opacity: .65;
   padding: 0 1.5rem;
 }
 .cover .btn-lg {
@@ -144,11 +147,15 @@ h6, .h6 {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
+    top: 0;
+  }
+
+  .masthead1{
     position: fixed;
     top: 0;
   }
+
   .mastfoot {
-    position: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -157,6 +164,7 @@ h6, .h6 {
   }
   /* Handle the widths */
   .masthead,
+  .masthead1,
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
@@ -165,6 +173,7 @@ h6, .h6 {
 
 @media (min-width: 62em) {
   .masthead,
+  .masthead1,
   .mastfoot,
   .cover-container {
     width: 65rem;
@@ -210,11 +219,21 @@ h6, .h6 {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('home_bg.png') no-repeat;
   background-size: cover;
 }
 
+.home-nav {
+  animation: fadein 10s;
+  -moz-animation: fadein 10s; /* Firefox */
+  -webkit-animation: fadein 10s; /* Safari and Chrome */
+  -o-animation: fadein 10s; /* Opera */
+}
+
 .app-footer {
+  animation: fadein 10s;
+  -moz-animation: fadein 10s; /* Firefox */
+  -webkit-animation: fadein 10s; /* Safari and Chrome */
+  -o-animation: fadein 10s; /* Opera */
   color: white;
 }
 
@@ -232,6 +251,7 @@ h6, .h6 {
 }
 
 .app-card-container {
+  margin-top: 15%;
   color: black;
   text-align: left;
 }
@@ -241,7 +261,9 @@ h6, .h6 {
 }
 
 .profile-img {
+  opacity: .9;
   border: 1px solid grey;
+  border-radius: 200px;
 }
 
 .app-card-container a {
@@ -257,3 +279,153 @@ h6, .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.home-fade1 {
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+
+.home-fade2 {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  -o-animation: fadein 5s; /* Opera */
+}
+
+.home-fade3 {
+  animation: fadein 7s;
+  -moz-animation: fadein 7s; /* Firefox */
+  -webkit-animation: fadein 7s; /* Safari and Chrome */
+  -o-animation: fadein 7s; /* Opera */
+}
+
+.home-fade4 {
+  animation: fadein 9s;
+  -moz-animation: fadein 9s; /* Firefox */
+  -webkit-animation: fadein 9s; /* Safari and Chrome */
+  -o-animation: fadein 9s; /* Opera */
+}
+
+.home-fade5 {
+  animation: fadein 16s;
+  -moz-animation: fadein 16s; /* Firefox */
+  -webkit-animation: fadein 16s; /* Safari and Chrome */
+  -o-animation: fadein 16s; /* Opera */
+}
+
+.about_p {
+  font-size: 1.2em;
+  color: white;
+}
+
+.about_p2 {
+  background-color: white;
+  font-size: 1.2em;
+  color: black;
+}
+
+.about_c {
+  color: white;
+}
+
+.test {
+  color: red;
+}
+
+.job_card {
+  display: inline-flex;
+  max-height: 80px;
+  max-width: 250px;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  /*about page styles and tests below*/
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 302px;
+  height: 302px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  border-radius: 200px;
+  border: solid 1px black;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px -5px -5px #aaa;
+  opacity: 1.0;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  border-radius: 200px;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  background-color: rgba(73, 76, 81, 0.3);
+  opacity: 1.0;
+}
+
+.hidden {
+    display:none;
+}
+
+.frame_hide {
+    padding:10px;
+    position:relative;
+}
+
+
+
+
+
+

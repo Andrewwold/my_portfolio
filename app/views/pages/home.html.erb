@@ -1,7 +1,9 @@
+<% content_for :nav, render('shared/home_nav') %>
 <div class="inner cover">
-  <h1 class="cover-heading">Welcome to my online home.</h1>
-  <p class="lead">Software development is the closest concept we have to magic. It's my goal to ensure that anyone with a passion for coding can become a true programming artisan.</p>
+  <h1 class="cover-heading home-fade1">Welcome to my online home</h1>
+  <p class="lead home-fade2">Software development is the closest concept we have to magic.</p> <p class="lead home-fade3">I really enjoy working in an environment that enables the user to constantly grow learn and excel!</p> <p class="lead home-fade4"> I hope to be continually learning and growing for a long time to come.</p>
   <p class="lead">
-    <%= link_to "About Me", about_me_path, class: "btn btn-lg btn-secondary" %>
+    <%= link_to "About Me", about_me_path, class: "home-fade5" %>
   </p>
 </div>
+

@@ -20,3 +20,25 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+
+$(document).ready(function() {
+  $("#cf_onclick").click(function() {
+  $("#cf2 p.top").toggleClass("transparent");
+});
+});
+
+
+$(document).ready(function() {
+	setInterval(function(){
+		fade();
+	},6000);
+
+
+	
+	function fade(){
+		$("fade1").fadeToggle(0);
+	}
+	
+
+});
