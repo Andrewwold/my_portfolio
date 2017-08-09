@@ -1,6 +1,6 @@
 @import "bootstrap";
 @import "gritter";
-
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
 /*
  * Globals
  */
@@ -121,9 +121,13 @@ h6, .h6 {
 
 .cover {
   /*background: rgba(500, 600, 500, 0.1);*/
+  height: 300px;
   background-image: url("Shot.png");
   opacity: .65;
   padding: 0 1.5rem;
+
+
+
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -147,6 +151,7 @@ h6, .h6 {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
+    position: fixed;
     top: 0;
   }
 
@@ -156,6 +161,7 @@ h6, .h6 {
   }
 
   .mastfoot {
+    position: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -281,6 +287,7 @@ h6, .h6 {
 }
 
 .home-fade1 {
+  padding-top: 5%;
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
   -webkit-animation: fadein 3s; /* Safari and Chrome */
@@ -309,6 +316,7 @@ h6, .h6 {
 }
 
 .home-fade5 {
+  font-size: 50px;
   animation: fadein 16s;
   -moz-animation: fadein 16s; /* Firefox */
   -webkit-animation: fadein 16s; /* Safari and Chrome */
@@ -424,8 +432,66 @@ h6, .h6 {
     position:relative;
 }
 
+.btn {
+  width: 300px;
+  height: 60px; 
+}
 
+/*Color shifting text for click here bttn and footer copywrite*/
 
+.bttn {
+  background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: gradient 3s ease-in-out infinite;
+  -webkit-animation: gradient 3s ease-in-out infinite;
+  animation: gradient 3s ease-in-out infinite;
+  border: 2px;
+}
 
+.copyshift {
+  background: linear-gradient(120deg, #000000, #001c72, #4e65aa);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: gradient 6s ease-in-out infinite;
+  -webkit-animation: gradient 6s ease-in-out infinite;
+  animation: gradient 6s ease-in-out infinite;
+  border: 2px
+}
 
-
+/* motion */
+@-moz-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}

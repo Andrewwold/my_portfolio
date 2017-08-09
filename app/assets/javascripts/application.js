@@ -42,3 +42,19 @@ $(document).ready(function() {
 	
 
 });
+
+
+
+$(document).ready(function() {
+	setInterval(function(){
+		fade();
+	},12000);
+
+
+	
+	function fade(){
+		$("fade2").fadeToggle(0);
+	}
+	
+
+});
